@@ -46,7 +46,7 @@ colours = ('red', 'orange','yellow','green','blue','purple','pink')
 tur = turtle.Turtle()
 
 
-#we are setting the position of an object
+
 for x in range (5):
     randColour = random.randrange(0, len(colours)) #making it a random colour
     tur.color(colours[randColour], colours[random.randrange(0, len(colours))])
@@ -112,11 +112,10 @@ for i in range(5):
 
 tur = turtle.Turtle()
 tur.speed = (0)
-tur.width(5) #new thing - how wide
+tur.width(5) 
 
 colours = ('red', 'orange','yellow','green','blue','black', 'purple', 'pink', 'light blue')
-#we want users to be able to hit keys and move
-#we are making functions
+
 
 def up():
     tur.setheading(90)
@@ -136,12 +135,9 @@ def clickleft(x,y):
     tur.color(random.choice(colours))
 def clickright(x,y):
     tur.stamp()
-#different for mouse buttons
-# if we want to click the object turtle.onclick(clickleft, 1/2/3)
 turtle.onscreenclick(clickleft, 1)
 turtle.onscreenclick(clickright, 3)
 
-#an event is something that the user does
 turtle.listen() #starting an event
 turtle.onkey(up, 'Up') #based on a key and it'll do the function
 turtle.onkey(down, 'Down')
